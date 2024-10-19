@@ -54,8 +54,13 @@
   </div>
 </div>
 
-<footer>
-  <p>&copy; 2023 Jenish Patel. All rights reserved.</p>
+<footer class="footer">
+    <p class="copyright">Copyright © 2024 Jenish Patel Portfolio - All Rights Reserved.</p>
+    <br><ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Contact Me</a></li>
+    </ul>
 </footer>
 <script>const words=["Web Developer","Graphic Designer","Gamer"],dynamicText=document.getElementById("dynamicText");let wordIndex=0,letterIndex=0,isDeleting=!1;function typeWords(){const currentWord=words[wordIndex];dynamicText.textContent=currentWord.substring(0,letterIndex),isDeleting?letterIndex--:letterIndex++,letterIndex===currentWord.length+1&&(isDeleting=!0),letterIndex===0&&(isDeleting=!1,wordIndex=(wordIndex+1)%words.length);const typingSpeed=isDeleting?50:100,delay=isDeleting?30:typingSpeed;setTimeout(typeWords,delay)}typeWords();function toggleMobileMenu(){var mobileMenu=document.getElementById("mobileMenu");mobileMenu.style.display="block"===mobileMenu.style.display?"none":"block"}
 </script>
