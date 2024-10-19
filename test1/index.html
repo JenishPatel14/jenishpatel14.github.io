@@ -1,110 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles remain */
-        body {
-            font-family: 'Roboto Slab', serif;
-            background-color: #ffffff;
-        }
-        /* Header styles */
-        header {
-            background-color: #000000;
-            color: #fff;
-            padding: 20px;
-        }
-        .logo img {
-            width: 100px;
-        }
-        /* Other custom styles can remain as needed */
-    </style>
-    <title>Your Website Title</title>
+  <link rel="stylesheet" href="https://github.com/JenishPatel14/jenishpatel14.github.io/blob/512b021338f5a91c384b424298b0890b2028a804/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jenish Patel - Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="d-flex justify-content-between align-items-center">
-        <div class="logo">
-            <img src="your-logo.png" alt="Logo">
-        </div>
-        <nav>
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="container mt-4">
-        <h2 class="text-center">Welcome to My Website</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="text-container">
-                    <p>Your content goes here.</p>
-                    <button class="btn btn-primary">Contact Me</button>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="photo-container">
-                    <img src="your-photo.jpg" alt="Your Photo" class="img-fluid rounded-circle">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="card-container">
-        <div class="card">
-            <img src="card-image.jpg" class="card-img-top" alt="Card image">
-            <div class="card-body">
-                <h5 class="card-title">Card Title</h5>
-                <p class="card-text">Some quick example text.</p>
-                <a href="#" class="btn btn-success">Go somewhere</a>
-            </div>
-        </div>
-        <!-- Repeat cards as needed -->
+<header>
+  <div class="logo">
+    <h1>Jenish Patel</h1>
+    <p>Building tomorrow's web, today</p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="https://jenishpatel14.github.io/stockaveragecalculator/">About</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-button" onclick="toggleMobileMenu()">
+    <div class="container">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
     </div>
+  </div>
+</header>
 
-    <footer class="footer mt-auto py-3 bg-dark text-white">
-        <div class="container text-center">
-            <p>&copy; 2024 Your Website</p>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
-                <li class="list-inline-item"><a href="#" class="text-white">Terms of Service</a></li>
-            </ul>
-        </div>
-    </footer>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="https://jenishpatel14.github.io/stockaveragecalculator/">About</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // Your existing JavaScript remains unchanged
-        const words = ["Web Developer", "Graphic Designer", "Gamer"];
-        const dynamicText = document.getElementById("dynamicText");
-        let wordIndex = 0, letterIndex = 0, isDeleting = false;
+<div>
+  <h2>Contact Information</h2>
+  <p style="text-align:center"><b>Email:</b> pateljenu531@gmail.com</p>
+  <h3 style="text-align:center">Follow Me on</h3>
+  <div class="social-icons">
+    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 30 30">
+      <path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h10v-9h-3v-3h3v-1.611C16,9.339,17.486,8,20.021,8 c1.214,0,1.856,0.09,2.16,0.131V11h-1.729C19.376,11,19,11.568,19,12.718V14h3.154l-0.428,3H19v9h5c1.105,0,2-0.895,2-2V6 C26,4.895,25.104,4,24,4z"></path>
+    </svg></a>
+    <!-- Add other social icons here -->
+  </div>
+</div>
 
-        function typeWords() {
-            const currentWord = words[wordIndex];
-            dynamicText.textContent = currentWord.substring(0, letterIndex);
-            letterIndex = isDeleting ? letterIndex - 1 : letterIndex + 1;
-
-            if (letterIndex === currentWord.length + 1) isDeleting = true;
-            if (letterIndex === 0) {
-                isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-            }
-
-            const typingSpeed = isDeleting ? 50 : 100;
-            setTimeout(typeWords, typingSpeed);
-        }
-        typeWords();
-
-        function toggleMobileMenu() {
-            var mobileMenu = document.getElementById("mobileMenu");
-            mobileMenu.style.display = (mobileMenu.style.display === "block") ? "none" : "block";
-        }
-    </script>
+<footer>
+  <p>&copy; 2023 Jenish Patel. All rights reserved.</p>
+</footer>
+<script></script>
 </body>
 </html>
