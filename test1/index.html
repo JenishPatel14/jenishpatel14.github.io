@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles remain */
+        body {
+            font-family: 'Roboto Slab', serif;
+            background-color: #ffffff;
+        }
+        /* Header styles */
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+        }
+        .logo img {
+            width: 100px;
+        }
+        /* Other custom styles can remain as needed */
+    </style>
+    <title>Your Website Title</title>
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center">
+        <div class="logo">
+            <img src="your-logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container mt-4">
+        <h2 class="text-center">Welcome to My Website</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="text-container">
+                    <p>Your content goes here.</p>
+                    <button class="btn btn-primary">Contact Me</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="photo-container">
+                    <img src="your-photo.jpg" alt="Your Photo" class="img-fluid rounded-circle">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="card-image.jpg" class="card-img-top" alt="Card image">
+            <div class="card-body">
+                <h5 class="card-title">Card Title</h5>
+                <p class="card-text">Some quick example text.</p>
+                <a href="#" class="btn btn-success">Go somewhere</a>
+            </div>
+        </div>
+        <!-- Repeat cards as needed -->
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container text-center">
+            <p>&copy; 2024 Your Website</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="#" class="text-white">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Your existing JavaScript remains unchanged
+        const words = ["Web Developer", "Graphic Designer", "Gamer"];
+        const dynamicText = document.getElementById("dynamicText");
+        let wordIndex = 0, letterIndex = 0, isDeleting = false;
+
+        function typeWords() {
+            const currentWord = words[wordIndex];
+            dynamicText.textContent = currentWord.substring(0, letterIndex);
+            letterIndex = isDeleting ? letterIndex - 1 : letterIndex + 1;
+
+            if (letterIndex === currentWord.length + 1) isDeleting = true;
+            if (letterIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+            }
+
+            const typingSpeed = isDeleting ? 50 : 100;
+            setTimeout(typeWords, typingSpeed);
+        }
+        typeWords();
+
+        function toggleMobileMenu() {
+            var mobileMenu = document.getElementById("mobileMenu");
+            mobileMenu.style.display = (mobileMenu.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
