@@ -40,6 +40,40 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </div>
+  <div class="container">
+    <h1 class="mt-5">Stock Average Calculator</h1>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <form id="stockForm">
+          <div class="mb-3">
+            <label for="units1" class="form-label">Units 1</label>
+            <input type="number" class="form-control" id="units1" required>
+            <div class="invalid-feedback">Please enter units for the first purchase.</div>
+          </div>
+          <div class="mb-3">
+            <label for="Price1" class="form-label">Price 1</label>
+            <input type="number" class="form-control" id="Price1" required>
+            <div class="invalid-feedback">Please enter price for the first purchase.</div>
+          </div>
+          <div class="mb-3">
+            <label for="units2" class="form-label">Units 2</label>
+            <input type="number" class="form-control" id="units2" required>
+            <div class="invalid-feedback">Please enter units for the second purchase.</div>
+          </div>
+          <div class="mb-3">
+            <label for="Price2" class="form-label">Price 2</label>
+            <input type="number" class="form-control" id="Price2" required>
+            <div class="invalid-feedback">Please enter price for the second purchase.</div>
+          </div>
+          <button type="button" class="btn btn-primary" id="calculateBtn">Calculate</button>
+          <button type="button" class="btn btn-secondary" id="clearBtn">Clear</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div id="resultDiv" class="mt-4"></div>
+      </div>
+    </div>
+  </div>
 <hr color="green";>
   <div>
     <h2 class="h2">Contact Information</h2>
