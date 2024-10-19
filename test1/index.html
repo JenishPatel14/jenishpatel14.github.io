@@ -117,5 +117,50 @@
 </footer>
 <script>const words=["Web Developer","Graphic Designer","Gamer"],dynamicText=document.getElementById("dynamicText");let wordIndex=0,letterIndex=0,isDeleting=!1;function typeWords(){const currentWord=words[wordIndex];dynamicText.textContent=currentWord.substring(0,letterIndex),isDeleting?letterIndex--:letterIndex++,letterIndex===currentWord.length+1&&(isDeleting=!0),letterIndex===0&&(isDeleting=!1,wordIndex=(wordIndex+1)%words.length);const typingSpeed=isDeleting?50:100,delay=isDeleting?30:typingSpeed;setTimeout(typeWords,delay)}typeWords();function toggleMobileMenu(){var mobileMenu=document.getElementById("mobileMenu");mobileMenu.style.display="block"===mobileMenu.style.display?"none":"block"}
 </script>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+  const calculateBtn = document.getElementById('calculateBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  const resultDiv = document.getElementById('resultDiv');
+
+  calculateBtn.addEventListener('click', function () {
+    const unit1 = parseFloat(document.getElementById("units1").value);
+    const price1 = parseFloat(document.getElementById("Price1").value);
+    const unit2 = parseFloat(document.getElementById("units2").value);
+    const price2 = parseFloat(document.getElementById("Price2").value);
+
+    if (isNaN(unit1) || isNaN(price1) || isNaN(unit2) || isNaN(price2)) {
+      return;
+    }
+
+    const totalAmount = ((unit1 * price1) + (unit2 * price2)).toFixed(2);
+    const totalUnits = unit1 + unit2;
+    const averagePrice = (((unit1 * price1) + (unit2 * price2)) / totalUnits).toFixed(2);
+    const amountInvested1 = (unit1 * price1).toFixed(2);
+    const amountInvested2 = (unit2 * price2).toFixed(2);
+
+    resultDiv.innerHTML = `
+      <div style="color:green;">Amount invested in first purchase: <strong>${amountInvested1}</strong></div>
+      <hr style="color:green";><div>Amount invested in second purchase: <strong>${amountInvested2}</strong></div>
+      <hr style="color:green";><div>Total units: <strong>${totalUnits}</strong></div>
+      <div>Average Price: <strong>${averagePrice}</strong></div>
+      <div>Total Amount: <strong>${totalAmount}</strong></div>
+    `;
+
+    resultDiv.style.display = "block"; // Show the result div
+  });
+
+  clearBtn.addEventListener('click', function () {
+    document.getElementById("units1").value = '';
+    document.getElementById("Price1").value = '';
+    document.getElementById("units2").value = '';
+    document.getElementById("Price2").value = '';
+    resultDiv.innerHTML = '';
+    resultDiv.style.display = "none"; // Hide the result div
+  });
+});
+
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
