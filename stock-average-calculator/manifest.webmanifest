@@ -1,0 +1,1 @@
+{  "name": "Stock Market Average Calculator - Calculate Stock Average Price",  "short_name": "Stock Average Calculator",  "theme_color": "#fff",  "background_color": "#fff",  "display": "standalone",  "scope": "/stock-average-calculator",  "start_url": "/stock-average-calculator"}
