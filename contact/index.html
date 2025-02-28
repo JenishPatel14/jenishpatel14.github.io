@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-1986887645606657">
+    <title>Contact Us - Jenish Patel</title><meta name="robots" content="noindex">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<style>/* Optimized CSS */
+    body {
+        background: #1a1a1a;
+        color: #fff;
+        font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    header {
+        background: #2d2d2d;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .brand {
+        color: #60a5fa;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+    }
+    
+    .nav-links a:hover {
+        background: rgba(96, 165, 250, 0.082);
+    }
+    
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #fff;
+    }
+    
+    footer {
+        background: #2d2d2d;
+        padding: 2rem 0;
+        margin-top: 3rem;
+        text-align: center;
+    }
+    
+    footer p {
+        margin-bottom: 0.5rem;
+        color: #fff;
+    }
+    
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+        color: #60a5fa;
+    }
+    
+    /* Form Styling */
+    form {
+        margin-top: 3rem;
+        background-color: #333;
+        padding: 2rem;
+        border-radius: 8px;
+    }
+    
+    .field {
+        margin-bottom: 1rem;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: #444;
+        color: #fff;
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    input[type="submit"] {
+        background-color: #60a5fa;
+        color: #fff;
+        border: none;
+        padding: 1rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #4d90d7;
+    }
+    
+    /* Media Query for Mobile */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 20px;
+            background: #2d2d2d;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 200px;
+        }
+    
+        .nav-links.active {
+            display: flex;
+        }
+    
+        .menu-toggle {
+            display: block;
+        }
+    }
+    </style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "1986887645606657",
+            enable_page_level_ads: true
+        });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R51464300B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-R51464300B');
+    </script></head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="brand">Jenish Patel</div>
+            <button class="menu-toggle">☰</button>
+            <nav class="nav-links">
+                <a href="https://jenishpatel14.github.io/about-us">About Us</a>
+                <a href="https://jenishpatel14.github.io/contact">Contact Us</a>
+                <a href="https://jenishpatel14.github.io/tools">Tools</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Contact Us</h1><p>If you have any questions, suggestions, or feedback, feel free to reach out to me. I’ll do my best to respond within 24 hours.</p>
+        <form id="form">
+            <div class="field">
+                <label for="from_name">Your Name</label>
+                <input type="text" name="from_name" id="from_name" required>
+            </div>
+            <div class="field">
+                <label for="from_email">Your Email</label>
+                <input type="email" name="from_email" id="from_email" required>
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4" required></textarea>
+            </div>
+
+            <input type="submit" id="button" value="Send Message">
+        </form><p>You can also connect with me on <a href="https://www.instagram.com/jenishpatel_14/" target="_blank">Instagram</a> or check out my work on <a href="https://github.com/JenishPatel14" target="_blank">GitHub</a>.</p>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Jenish Patel</p>
+            <div class="footer-links">
+                <a href="https://jenishpatel14.github.io/privacy-policy">Privacy Policy</a>
+                <a href="https://jenishpatel14.github.io/terms-and-condition">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        emailjs.init('jdtC2aws2omWJ6n6B');
+
+        const btn = document.getElementById('button');
+
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            btn.value = 'Sending...';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_jakheem';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Send Email';
+                    alert('Message Sent Successfully');
+                }, (err) => {
+                    btn.value = 'Send Email';
+                    alert('Failed to send. Please try again later.');
+                });
+        });
+    </script><script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
