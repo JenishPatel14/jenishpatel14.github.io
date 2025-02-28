@@ -1,0 +1,25 @@
+{
+    "name": "TNPSC Photo Compressor",
+    "short_name": "TNPSC Photo",
+    "description": "Compress and resize your TNPSC application photos easily. Add name and date, adjust compression, and download in JPG, PNG, or WEBP formats.",
+    "start_url": "/tnpsc-photo-compressor/",
+    "display": "standalone",
+    "background_color": "#1a1a1a",
+    "theme_color": "#60a5fa",
+    "scope": "https://jenishpatel14.github.io/tnpsc-photo-compressor/",
+    "icons": [
+        {
+            "src": "https://jenishpatel14.github.io/tnpsc-photo-compressor/images/favicon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://jenishpatel14.github.io/tnpsc-photo-compressor/images/favicon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "lang": "en",
+    "dir": "ltr",
+    "orientation": "portrait"
+}
