@@ -470,7 +470,7 @@
                     showLoader();
                     const title = currentSlidesData.title.replace(/[^a-z0-9]/gi, '_').toLowerCase() || 'slideshare';
                     
-                    const response = await fetch('/api/download-selected', {
+                    const response = await fetch('https://slideshare.onrender.com/api/download-selected', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
