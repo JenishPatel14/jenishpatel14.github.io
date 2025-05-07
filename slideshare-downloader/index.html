@@ -305,7 +305,7 @@
                 showLoader();
                 
                 try {
-                    const response = await fetch('https://jenishpatel14.github.io/api/get-slides', {
+                    const response = await fetch('https://slideshare.onrender.com/api/get-slides', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -428,7 +428,7 @@
                 // Create a temporary link
                 const a = document.createElement('a');
                 a.style.display = 'none';
-                a.href = `https://jenishpatel14.github.io/api/download-image?url=${encodeURIComponent(url)}`;
+                a.href = `https://slideshare.onrender.com/api/download-image?url=${encodeURIComponent(url)}`;
                 a.download = `slide-${index + 1}.jpg`;
                 
                 // Add to body, click, and remove
@@ -470,7 +470,7 @@
                     showLoader();
                     const title = currentSlidesData.title.replace(/[^a-z0-9]/gi, '_').toLowerCase() || 'slideshare';
                     
-                    const response = await fetch('https://jenishpatel14.github.io/api/download-selected', {
+                    const response = await fetch('https://slideshare.onrender.com/api/download-selected', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
