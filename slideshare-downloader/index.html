@@ -8,7 +8,98 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Your full HTML UI goes here -->
+  <div class="container">
+        <div class="header text-center">
+            <h1><i class="fas fa-download me-2"></i>SlideShare Downloader</h1>
+            <p class="mb-0">Download any SlideShare presentation with selected slides</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="url" id="slideshare-url" class="form-control form-control-lg" 
+                                   placeholder="Paste SlideShare URL here..." required>
+                            <button class="btn btn-primary btn-lg" id="fetch-btn" type="button">
+                                <i class="fas fa-search me-2"></i>Fetch
+                            </button>
+                        </div>
+                        <div class="alert alert-danger mt-3 mb-0 d-none" id="error-message"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loader"></div>
+
+        <div class="row mt-4 d-none" id="results-section">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h4 class="card-title mb-3" id="presentation-title">Presentation Title</h4>
+                        <div class="thumbnail-container mb-3">
+                            <img src="" id="presentation-thumbnail" class="thumbnail-img" alt="Presentation thumbnail">
+                        </div>
+                        
+                        <div class="btn-group w-100 mb-3" role="group">
+                            <button type="button" class="btn btn-outline-primary quality-btn" data-quality="320">
+                                Low
+                            </button>
+                            <button type="button" class="btn btn-outline-primary quality-btn" data-quality="638">
+                                Medium
+                            </button>
+                            <button type="button" class="btn btn-outline-primary quality-btn active" data-quality="2048">
+                                High
+                            </button>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success download-btn" id="download-pdf">
+                                <i class="fas fa-file-pdf me-2"></i>Download PDF
+                            </button>
+                            <button class="btn btn-primary download-btn" id="download-ppt">
+                                <i class="fas fa-file-powerpoint me-2"></i>Download PPT
+                            </button>
+                            <button class="btn btn-secondary download-btn" id="download-zip">
+                                <i class="fas fa-file-archive me-2"></i>Download ZIP
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="mb-0" id="selected-count">All slides selected</h5>
+                            <button class="btn btn-sm btn-outline-danger" id="clear-selection">
+                                <i class="fas fa-times-circle me-1"></i>Clear Selection
+                            </button>
+                        </div>
+                        
+                        <div class="row g-3" id="slides-container">
+                            <!-- Slides will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast align-items-center text-white bg-success" role="alert" id="success-toast">
+        <div class="d-flex">
+            <div class="toast-body" id="toast-message"></div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+
+    <div class="toast align-items-center text-white bg-danger" role="alert" id="error-toast">
+        <div class="d-flex">
+            <div class="toast-body" id="error-toast-message"></div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
   <script>
     const BACKEND_URL = 'https://slideshare.onrender.com';
 
