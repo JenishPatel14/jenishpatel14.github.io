@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIC Jeevan Saral Plan 165 Calculator | Estimate Maturity & Benefits</title>
+    <meta name="description" content="Use our LIC Jeevan Saral Plan 165 Calculator to estimate your policy's maturity value, sum assured, and loyalty additions. Fast, accurate, and user-friendly.">
+    <meta name="keywords" content="LIC Jeevan Saral Calculator, Plan 165 Maturity Calculator, LIC Maturity Calculator, Jeevan Saral Plan 165, LIC Policy Calculator">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="LIC Jeevan Saral Plan 165 Calculator" />
+    <meta property="og:description" content="Estimate maturity, loyalty additions & death benefit for LIC Jeevan Saral Plan 165." />
+    <meta property="og:url" content="https://jenishpatel14.github.io/lic-jeevan-saral-plan-165-calculator/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://jenishpatel14.github.io/assets/lic-jeevan-saral-calculator-preview.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LIC Jeevan Saral Plan 165 Calculator" />
+    <meta name="twitter:description" content="Fast and accurate tool to estimate your LIC Jeevan Saral Plan 165 maturity value." />
+    <meta name="twitter:image" content="https://jenishpatel14.github.io/assets/lic-jeevan-saral-calculator-preview.jpg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jenishpatel14.github.io/lic-jeevan-saral-plan-165-calculator/">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <style>
+        :root {
+            --primary-blue: #1e3c72;
+            --secondary-blue: #2a5298;
+            --accent-blue: #4a90e2;
+            --light-blue: #e6f0fa;
+            --dark-blue: #0a1f3d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            background: var(--dark-blue);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+        
+        .breadcrumb {
+            padding: 15px 20px;
+            background: var(--light-blue);
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+        
+        @media (max-width: 900px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .calculator-section, .content-section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--light-blue);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+        
+        select, input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s;
+            margin: 20px 0;
+        }
+        
+        button:hover {
+            background: var(--secondary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .result-section {
+            margin-top: 30px;
+            padding: 25px;
+            background: var(--light-blue);
+            border-radius: 8px;
+            border-left: 5px solid var(--accent-blue);
+            display: none;
+        }
+        
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .result-card {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .result-card h3 {
+            margin-top: 0;
+            color: var(--secondary-blue);
+            font-size: 16px;
+        }
+        
+        .result-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+        
+        .highlight-card {
+            background: var(--accent-blue);
+            color: white;
+        }
+        
+        .highlight-card h3, .highlight-card .result-value {
+            color: white;
+        }
+        
+        .chart-container {
+            height: 300px;
+            margin: 20px 0;
+        }
+        
+        .pay-matrix {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .pay-matrix th, .pay-matrix td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .pay-matrix th {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+        
+        .pay-matrix tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .pay-matrix tr:hover {
+            background-color: var(--light-blue);
+        }
+        
+        .faq-section {
+            margin-top: 40px;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .related-content {
+            margin-top: 40px;
+        }
+        
+        .related-articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .article-card {
+            border: 1px solid #eee;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .article-image {
+            height: 160px;
+            background: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-size: 2rem;
+        }
+        
+        .article-content {
+            padding: 15px;
+        }
+        
+        .article-title {
+            margin: 0;
+            color: var(--primary-blue);
+        }
+        
+        .article-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .article-title a:hover {
+            text-decoration: underline;
+        }
+        
+        .article-excerpt {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        footer {
+            background: var(--dark-blue);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .disclaimer {
+            background: #fff8e1;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+        #result{background: #ededed;
+    border-radius: inherit;
+    padding-left: 25px;}
+
+    .faq-item {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  background: #f9f9f9;
+}
+.faq-item summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--primary-blue);
+}
+.faq-item[open] {
+  background: #e6f0fa;
+}
+.faq-item p {
+  margin-top: 10px;
+}
+
+    </style>
+    
+    <!-- Chart.js -->
+    <script async src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the Jeevan Saral calculator accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It gives a good estimate based on LIC bonus history, but for exact values, contact LIC or your insurance advisor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum premium for Jeevan Saral?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The minimum monthly premium is ₹250, and it must be in multiples of ₹50."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maturity age for Jeevan Saral?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The policy term can be between 10–35 years, and the maximum maturity age is 70 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I surrender LIC Jeevan Saral Plan 165 early?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the policy can be surrendered after paying premiums for at least 3 full years. You will receive the higher of Guaranteed Surrender Value or Special Surrender Value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the loyalty addition in Jeevan Saral?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Loyalty additions are performance-based bonuses declared by LIC. They are applicable only if the policy has run for at least 10 years and is in force."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the maturity value calculated for Jeevan Saral?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The maturity value is: Sum Assured + Loyalty Additions. The sum assured varies based on entry age, term, and premium amount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is LIC Jeevan Saral available for all age groups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Entry age is from 12 to 60 years. The plan matures by age 70."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I take a loan against Jeevan Saral policy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Loans are allowed once the policy acquires a paid-up value, which typically happens after 3 years of continuous premium payment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Jeevan Saral maturity amount taxable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, the maturity amount is exempt under Section 10(10D), provided the annual premium does not exceed 10% of the sum assured."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I stop paying premiums?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If premiums have been paid for at least 3 years, the policy becomes paid-up with reduced benefits. Otherwise, the policy lapses without value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Jeevan Saral have rider benefits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Optional riders like Accidental Death and Disability Benefit and Term Assurance Rider are available for added protection."
+      }
+    }
+  ]
+}
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LIC Jeevan Saral Plan 165 Calculator</h1>
+            <p class="subtitle">Estimate your maturity value, sum assured, loyalty additions & death benefits using LIC's Jeevan Saral (Plan 165) based on your premium and policy term.</p>
+        </header>
+        
+        <!--<div class="main-content">
+            <div class="calculator-section">
+                <h2 class="section-title">Salary Calculator</h2>
+                
+                <form id="calculator-form">
+        <label>Entry Age (in years):
+          <input type="number" name="age" min="8" max="60" required />
+        </label>
+        <label>Policy Term (in years):
+          <input type="number" name="term" min="10" max="35" required />
+        </label>
+        <label>Monthly Premium (₹):
+          <input type="number" name="premium" min="250" step="50" required />
+        </label>
+        <label>Premium Frequency:
+          <select name="frequency" required>
+            <option value="monthly">Monthly</option>
+          </select>
+        </label>
+        <button type="submit">Calculate</button>
+      </form>
+      <div id="result"></div>-->
+        <div class="main-content">
+  <div class="calculator-section">
+    <h2 class="section-title">LIC Jeevan Saral (Plan 165) Maturity Value Calculator</h2>
+
+    <form id="calculator-form">
+      <label>Entry Age (in years):
+        <input type="number" name="age" min="12" max="60" required />
+      </label>
+
+      <label>Premium Amount (₹):
+        <input type="number" name="premium" min="250" step="50" required />
+      </label>
+
+      <label>Premium Frequency:
+        <select name="frequency" required>
+          <option value="monthly">Monthly</option>
+          <option value="quarterly">Quarterly</option>
+          <option value="half-yearly">Half-Yearly</option>
+          <option value="yearly">Yearly</option>
+        </select>
+      </label>
+
+      <label>Policy Term (in years):
+        <input type="number" name="term" min="10" max="35" required />
+      </label>
+
+      <label>Sum Assured (₹):
+        <input type="number" name="sumAssured" min="10000" step="1000" required />
+      </label>
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="result" style="margin-top:1.5rem;"></div>
+
+      <article style="color: var(--primary-blue); border-top: 2px solid var(--light-blue); margin-top: 5px; padding-top: 10px;">
+  <h2>LIC Jeevan Saral Plan 165 Calculator – Estimate Your Maturity Value & Death Benefit</h2>
+  <p>Are you a policyholder or planning to invest in LIC’s trusted savings-cum-insurance product? Understanding your plan’s potential returns is key. The <strong>LIC Jeevan Saral Plan 165 Maturity Calculator</strong> helps you estimate your maturity amount, sum assured, loyalty additions, and death benefit using just a few basic inputs.</p>
+
+  <h2>What is LIC Jeevan Saral Plan 165?</h2>
+  <p><strong>LIC’s Jeevan Saral (Plan No. 165)</strong> is a flexible, non-linked endowment plan offering a unique blend of protection and savings. This plan is especially popular among salaried individuals looking for liquidity, risk cover, and tax savings in a single product.</p>
+
+  <h3>Key Features:</h3>
+  <ul>
+    <li><strong>Entry Age:</strong> 12 to 60 years</li>
+    <li><strong>Policy Term:</strong> 10 to 35 years</li>
+    <li><strong>Minimum Monthly Premium:</strong> ₹250 (in multiples of ₹50)</li>
+    <li><strong>Loyalty Additions:</strong> Eligible from the 10th policy year</li>
+    <li><strong>Tax Benefits:</strong> Section 80C & 10(10D)</li>
+  </ul>
+
+  <h2>Why Use Our LIC Jeevan Saral Maturity Calculator?</h2>
+  <p>Manually calculating LIC maturity values can be tricky due to variable loyalty additions and age-based sum assured. Our <strong>online calculator for LIC Jeevan Saral Plan 165</strong> eliminates the guesswork by estimating:</p>
+  <ul>
+    <li>Total Premium Paid</li>
+    <li>Sum Assured</li>
+    <li>Loyalty Addition (estimated)</li>
+    <li>Maturity Amount</li>
+    <li>Death Benefit</li>
+  </ul>
+  <p>This tool is based on official LIC brochures and previous bonus trends. It is <strong>not an official LIC tool</strong>, but highly accurate for estimation.</p>
+
+  <h2>How to Use the LIC Jeevan Saral Plan 165 Calculator</h2>
+
+  <h3>Step-by-Step Guide:</h3>
+  <ol>
+    <li><strong>Enter your age at entry</strong> (between 12 and 60 years).</li>
+    <li><strong>Choose your premium amount</strong> (starting from ₹250).</li>
+    <li><strong>Select premium frequency:</strong> Monthly, Quarterly, Half-Yearly, or Yearly.</li>
+    <li><strong>Enter your desired policy term</strong> (10 to 35 years).</li>
+    <li><strong>Input your expected sum assured</strong> (min ₹10,000).</li>
+    <li>Click on <strong>Calculate</strong> to view the results instantly.</li>
+  </ol>
+<img 
+  src="/8th pay/lic-jeevan-saral-calculator-preview.jpg" 
+  alt="LIC Jeevan Saral Plan 165 Maturity Calculator preview" 
+  loading="lazy" 
+  width="1200" 
+  height="630" 
+  style="max-width:100%; height:auto;" />
+
+  <h3>What Your Results Include:</h3>
+  <ul>
+    <li><strong>Total Premium Paid:</strong> Full investment across the policy term</li>
+    <li><strong>Sum Assured:</strong> Guaranteed payout on maturity or death</li>
+    <li><strong>Loyalty Additions:</strong> Non-guaranteed bonuses based on LIC performance</li>
+    <li><strong>Maturity Amount:</strong> Sum Assured + Loyalty Additions</li>
+    <li><strong>Death Benefit:</strong> 250 × monthly premium + bonuses (if any)</li>
+  </ul>
+
+  <h2>LIC Jeevan Saral Plan 165 Example Calculation</h2>
+  <ul>
+    <li>Age at Entry: 30 years</li>
+    <li>Policy Term: 20 years</li>
+    <li>Monthly Premium: ₹500</li>
+    <li>Sum Assured: ₹1,25,000 (example)</li>
+    <li>Loyalty Additions: ₹20,000 (estimated)</li>
+    <li><strong>Maturity Value:</strong> ₹1,45,000 (approx)</li>
+    <li><strong>Death Benefit:</strong> ₹1,45,000 (approx)</li>
+  </ul>
+
+  <h2>Online Calculator vs LIC Jeevan Saral Excel Sheet</h2>
+  <p>Many users look for <em>LIC Jeevan Saral Plan 165 Maturity Calculator Excel</em>, but using spreadsheets can be time-consuming and error-prone. This web-based calculator is faster, more accurate, and optimized for mobile and desktop — no downloads required.</p>
+
+  <h2>Maximize Returns from Jeevan Saral Policy</h2>
+  <p>To get the most out of your LIC Jeevan Saral policy:</p>
+  <ul>
+    <li>Choose longer policy terms for higher loyalty additions</li>
+    <li>Prefer annual payment to save on premium mode charges</li>
+    <li>Avoid lapses to retain bonus eligibility and policy benefits</li>
+  </ul>
+
+    <h2>Final Thoughts</h2>
+    <p>LIC Jeevan Saral (Plan 165) is a solid insurance cum investment product. If you're planning your savings or retirement corpus, using a <strong>LIC Jeevan Saral Maturity Calculator</strong> gives you clarity on your expected returns.</p>
+
+    <p><strong>Start calculating your LIC Jeevan Saral maturity value today with our free online tool.</strong></p>
+                </article>
+                
+                <div class="faq-section">
+  <h2 class="section-title">FAQs – LIC Jeevan Saral Plan 165 Calculator</h2>
+
+  <details class="faq-item">
+    <summary>Is the Jeevan Saral calculator accurate?</summary>
+    <p>It gives a good estimate based on LIC bonus history, but for exact values, contact LIC or your insurance advisor.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>What is the minimum premium for Jeevan Saral?</summary>
+    <p>The minimum monthly premium is ₹250, and it must be in multiples of ₹50.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>What is the maturity age for Jeevan Saral?</summary>
+    <p>The policy term can be between 10–35 years, and the maximum maturity age is 70 years.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Can I surrender LIC Jeevan Saral Plan 165 early?</summary>
+    <p>Yes, the policy can be surrendered after paying premiums for at least 3 full years. You will receive the higher of Guaranteed Surrender Value or Special Surrender Value.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>What is the loyalty addition in Jeevan Saral?</summary>
+    <p>Loyalty additions are performance-based bonuses declared by LIC. They are applicable only if the policy has run for at least 10 years and is in force.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>How is the maturity value calculated for Jeevan Saral?</summary>
+    <p>The maturity value is: <strong>Sum Assured + Loyalty Additions</strong>. The sum assured varies based on entry age, term, and premium amount.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Is LIC Jeevan Saral available for all age groups?</summary>
+    <p>Yes. Entry age is from 12 to 60 years. The plan matures by age 70.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Can I take a loan against Jeevan Saral policy?</summary>
+    <p>Yes. Loans are allowed once the policy acquires a paid-up value, which typically happens after 3 years of continuous premium payment.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Is Jeevan Saral maturity amount taxable?</summary>
+    <p>No, the maturity amount is exempt under Section 10(10D), provided the annual premium does not exceed 10% of the sum assured.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>What happens if I stop paying premiums?</summary>
+    <p>If premiums have been paid for at least 3 years, the policy becomes paid-up with reduced benefits. Otherwise, the policy lapses without value.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Does Jeevan Saral have rider benefits?</summary>
+    <p>Yes. Optional riders like Accidental Death and Disability Benefit and Term Assurance Rider are available for added protection.</p>
+  </details>
+</div>
+
+            </div>
+            
+            
+                
+                <div class="content-section">
+                <div class="related-content">
+                    <h2 class="section-title">Popular Tools</h2>
+                    
+                    <div class="related-articles">
+                        <div class="article-card">
+                            <div class="article-image">📷</div>
+                            <div class="article-content">
+                                <h3 class="article-title"><a href="/tnpsc-photo-compressor/">TNPSC Photo Compressor</a></h3>
+                                <p class="article-excerpt">Compress TNPSC photo to 20–40KB instantly. Perfect for online form uploads.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="article-card">
+                            <div class="article-image">✍️</div>
+                            <div class="article-content">
+                                <h3 class="article-title"><a href="/tnpsc-signature-compressor/">TNPSC Signature Compressor</a></h3>
+                                <p class="article-excerpt">Reduce TNPSC signature size to 10–20KB as per official requirements.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="article-card">
+                            <div class="article-image">🎮</div>
+                            <div class="article-content">
+                                <h3 class="article-title"><a href="/bgmi-name-style/">BGMI Name Style</a></h3>
+                                <p class="article-excerpt">Create stylish BGMI names with symbols and fancy text in one click.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Salary Calculators India. All rights reserved.</p>
+            <p>Disclaimer: This calculator provides estimates based on current projections and should not be considered official.</p>
+        </footer>
+    </div>
+    
+    <!--<script>
+        document.getElementById("calculator-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const age = +this.age.value;
+      const term = +this.term.value;
+      const premium = +this.premium.value;
+      const sumAssured = premium * 250;
+      const loyaltyAddition = term >= 10 ? term * 100 : 0;
+      const maturityAmount = sumAssured + loyaltyAddition;
+      document.getElementById("result").innerHTML = `
+        <h3>Estimated Maturity Value: ₹${maturityAmount.toLocaleString()}</h3>
+        <p>Sum Assured: ₹${sumAssured.toLocaleString()}</p>
+        <p>Loyalty Addition: ₹${loyaltyAddition.toLocaleString()}</p>
+        <p><em>This is an estimate. Please consult LIC for official values.</em></p>
+      `;
+    });
+    </script>-->
+    <script>
+  document.getElementById("calculator-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const age = +this.age.value;
+    const term = +this.term.value;
+    const premium = +this.premium.value;
+    const frequency = this.frequency.value;
+    const sumAssured = +this.sumAssured.value;
+
+    const frequencyMap = {
+      "monthly": 12,
+      "quarterly": 4,
+      "half-yearly": 2,
+      "yearly": 1
+    };
+
+    const annualFrequency = frequencyMap[frequency];
+    const totalPremium = premium * annualFrequency * term;
+    const loyaltyAddition = term >= 10 ? Math.round(sumAssured * 0.1 + (term - 10) * 200) : 0;
+    const maturityAmount = sumAssured + loyaltyAddition;
+    const deathBenefit = 250 * premium + loyaltyAddition;
+
+    // Display Result Section
+    document.getElementById("result").style.display = "block";
+
+    // Update HTML
+    document.getElementById("result").innerHTML = `
+      <div style="padding:15px">
+        <h3>Estimated Results</h3>
+        <div class="result-grid">
+          <div class="result-card"><h3>Entry Age</h3><div class="result-value">${age} years</div></div>
+          <div class="result-card"><h3>Premium</h3><div class="result-value">₹${premium.toLocaleString()} (${frequency})</div></div>
+          <div class="result-card"><h3>Policy Term</h3><div class="result-value">${term} years</div></div>
+          <div class="result-card"><h3>Total Premium Paid</h3><div class="result-value">₹${totalPremium.toLocaleString()}</div></div>
+          <div class="result-card highlight-card"><h3>Sum Assured</h3><div class="result-value">₹${sumAssured.toLocaleString()}</div></div>
+          <div class="result-card"><h3>Loyalty Additions</h3><div class="result-value">₹${loyaltyAddition.toLocaleString()}</div></div>
+          <div class="result-card highlight-card"><h3>Maturity Amount</h3><div class="result-value">₹${maturityAmount.toLocaleString()}</div></div>
+          <div class="result-card"><h3>Death Benefit</h3><div class="result-value">₹${deathBenefit.toLocaleString()}</div></div>
+        </div>
+        <p style="color:#1D4E9E;"><em>Note: This result is an estimate based on publicly available LIC data. Actual maturity value, death benefit, and surrender value may vary depending on LIC’s official bonus declarations and policy terms. Please consult your LIC advisor or refer to the official policy document for accurate and personalized calculations.</em></p>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="resultChart"></canvas>
+      </div>
+    `;
+
+    // Chart.js rendering
+    const ctx = document.getElementById('resultChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Total Premium', 'Sum Assured', 'Loyalty Additions', 'Maturity Amount', 'Death Benefit'],
+        datasets: [{
+          label: '₹ Amounts',
+          data: [totalPremium, sumAssured, loyaltyAddition, maturityAmount, deathBenefit],
+          backgroundColor: [
+            '#2a5298', '#1e3c72', '#4a90e2', '#2a5298', '#4a90e2'
+          ],
+          borderRadius: 5
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: (ctx) => `₹${ctx.raw.toLocaleString()}` } }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: value => `₹${value.toLocaleString()}`
+            }
+          }
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
