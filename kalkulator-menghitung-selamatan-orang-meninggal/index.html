@@ -353,7 +353,7 @@
         </div>
     </article>
 </div>
-<script id="faqSchema" type="application/ld+json"></script>
+
 <footer>
     <div class="container">
         <div class="footer-links">
@@ -621,42 +621,46 @@
             a.click();
         }, 'image/jpeg');
     }
-
-    function generateFaqSchema() {
-        const faqs = [
-            {
-                question: "Apakah kalkulator ini sudah akurat dan sesuai tradisi Jawa?",
-                answer: "Ya, kalkulator ini menggunakan perhitungan hari Masehi yang akurat dan dikombinasikan dengan metode penanggalan Pasaran Jawa (Panca Wara) untuk menentukan hari-hari penting seperti Nelung Dina, Mitung Dina, Matangpuluh, hingga Nyewu. Hasil ini adalah patokan yang umum digunakan di banyak daerah di Jawa."
-            },
-            {
-                question: "Mengapa ada Pendhak Pisan dan Pendhak Pindho?",
-                answer: "Pendhak Pisan adalah selamatan yang dilaksanakan satu tahun setelah kematian, dihitung berdasarkan tahun Jawa (sekitar 354 hari). Pendhak Pindho adalah selamatan kedua (dua tahun setelah wafat). Kedua momen ini penting sebagai tahapan menuju Nyewu (1000 hari) yang merupakan penutup rangkaian selamatan."
-            },
-            {
-                question: "Apakah saya perlu menggunakan rumus hitungan selamatan secara manual lagi?",
-                answer: "Tidak perlu. Fungsi utama kalkulator ini adalah menghilangkan kebutuhan untuk menghitung rumus-rumus manual yang kompleks dan rentan salah. Cukup masukkan tanggal wafat, dan semua jadwal selamatan akan terhitung otomatis, termasuk konversi hari Masehi, Pasaran Jawa, dan tanggal Hijriah."
-            },
-            {
-                question: "Seberapa akurat konversi tanggal Hijriah di kalkulator ini?",
-                answer: "Konversi Hijriah didasarkan pada perhitungan matematis dengan tanggal referensi (1 Agustus 2024 = 26 Muharram 1446 H). Namun, karena penentuan awal bulan Hijriah di Indonesia seringkali didasarkan pada rukyatul hilal (pengamatan bulan), mungkin terdapat perbedaan satu atau dua hari dengan kalender resmi. Untuk acara selamatan, fokus utama biasanya tetap pada tanggal Masehi dan Pasaran Jawa."
-            }
-        ];
-
-        const schema = {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map(item => ({
-                "@type": "Question",
-                "name": item.question,
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": item.answer
-                }
-            }))
-        };
-
-        document.getElementById('faqSchema').textContent = JSON.stringify(schema, null, 2);
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apakah kalkulator ini sudah akurat dan sesuai tradisi Jawa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, kalkulator ini menggunakan perhitungan hari Masehi yang akurat dan dikombinasikan dengan metode penanggalan Pasaran Jawa (Panca Wara) untuk menentukan hari-hari penting seperti Nelung Dina, Mitung Dina, Matangpuluh, hingga Nyewu. Hasil ini adalah patokan yang umum digunakan di banyak daerah di Jawa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mengapa ada Pendhak Pisan dan Pendhak Pindho?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pendhak Pisan adalah selamatan yang dilaksanakan satu tahun setelah kematian, dihitung berdasarkan tahun Jawa (sekitar 354 hari). Pendhak Pindho adalah selamatan kedua (dua tahun setelah wafat). Kedua momen ini penting sebagai tahapan menuju Nyewu (1000 hari) yang merupakan penutup rangkaian selamatan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah saya perlu menggunakan rumus hitungan selamatan secara manual lagi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tidak perlu. Fungsi utama kalkulator ini adalah menghilangkan kebutuhan untuk menghitung rumus-rumus manual yang kompleks dan rentan salah. Cukup masukkan tanggal wafat, dan semua jadwal selamatan akan terhitung otomatis, termasuk konversi hari Masehi, Pasaran Jawa, dan tanggal Hijriah."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Seberapa akurat konversi tanggal Hijriah di kalkulator ini?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Konversi Hijriah didasarkan pada perhitungan matematis dengan tanggal referensi (1 Agustus 2024 = 26 Muharram 1446 H). Namun, karena penentuan awal bulan Hijriah di Indonesia seringkali didasarkan pada rukyatul hilal (pengamatan bulan), mungkin terdapat perbedaan satu atau dua hari dengan kalender resmi. Untuk acara selamatan, fokus utama biasanya tetap pada tanggal Masehi dan Pasaran Jawa."
+      }
     }
+  ]
+}
 </script>
 </body>
 </html>
